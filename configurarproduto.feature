@@ -7,7 +7,7 @@
         Contexto:
         Dado que eu acesse a página do EBAC-SHOP
 
-        Cenario: Seleções de cor, tamanho e quantidade válidos
+        Esquema do Cenario: Seleções de cor, tamanho e quantidade válidos
         Quando eu selecionar a <cor>
         E o <tamanho>, <quantidade>
         Então deve emitir a mensagem "Produto adicionado ao carrinho"
@@ -18,7 +18,7 @@
             | laranja | P       | 5          |
 
 
-        Cenario: Seleções de cor inválida
+        Esquema do Cenario: Seleções de cor inválida
         Quando eu selecionar a <cor>
         E o <tamanho>, <quantidade>
         Então deve emitir a mensagem de erro "Selecionar Cor: Por favor, escolha uma opção"
@@ -42,7 +42,7 @@
             | vermelho | nulo    | 9          |
 
 
-        Cenario: Seleções de quantidade inválida
+        Esquema do Cenario: Seleções de quantidade inválida
         Quando eu selecionar a <cor>
         E o <tamanho>, <quantidade>
         Então deve emitir a mensagem de erro <mensagem>
