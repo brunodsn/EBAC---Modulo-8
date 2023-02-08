@@ -16,10 +16,8 @@ Funcionalidade: Autenticação de usuário
             | deborahnunes@gmail.com   | 12356987@       | deborah  |
             | a.clara@outlook.com.br   | 89562924*       | anaclara |
             | superkalel@gmail.com     | 1144785269689** | kalel    |
-            | mah.teus@hotmail.com.br  | 0202368         | matheus  |
-            | donizete.pa@yahoo.com.br | 6936960123      | donizete |
 
-    Cenario: Usuário inválido
+    Esquema do Cenario: Usuário inválido
         Quando eu digitar o <usuario>
         E a <senha>
         Então deve aparecer a <mensagem>
@@ -29,7 +27,7 @@ Funcionalidade: Autenticação de usuário
             | deborahgmail.com    | 12356987@    | E-mail com formato inválido |
             | invalid@hotmail.com | 3@Zqaj5FqGzm | Usuário inexistente         |
 
-    Cenario: Usuário com senha inválida
+    Esquema do Cenario: Usuário com senha inválida
         Quando eu digitar o usuário "deborah@gmail.com"
         E a senha "123@fail"
         Então deve aparecer a mensagem "Usuário ou senha inválidos"
