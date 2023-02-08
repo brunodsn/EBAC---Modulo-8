@@ -3,7 +3,7 @@
             Quero fazer concluir meu cadastro
             Para finalizar minha compra
 
-            Cenario: Todos os campos obrigatórios corretos
+            Esquema do Cenario: Todos os campos obrigatórios corretos
             Quando eu digitar <nome>
             E digitar <sobrenome>, <pais>, <endereco>, <cidade>, <cep>, <telefone>, <e-mail>
             Então deve aparecer a mensagem "Deseja finalizar a compra?"
@@ -15,7 +15,7 @@
             | Kalel     | Penteado  | Brasil | Avenida 13, 895       | Valinhos | 1380-970  | (19) 3376-4176 | superkalel@gmail.com   |
 
 
-            Cenario: Campo nome incorreto
+            Esquema do Cenario: Campo nome incorreto
             Quando eu digitar <nome>
             E digitar <sobrenome>, <pais>, <endereco>, <cidade>, <cep>, <telefone>, <e-mail>
             Então deve aparecer a mensagem "O campo Nome é de preenchimento obrigatório. Deve conter apenas letras e espaço."
@@ -27,7 +27,7 @@
             | nulo      | Penteado  | Brasil | Avenida 13, 895       | Valinhos | 1380-970  | (19) 3376-4176 | superkalel@gmail.com   |
 
 
-            Cenario: Campo sobrenome incorreto
+            Esquema do Cenario: Campo sobrenome incorreto
             Quando eu digitar <nome>
             E digitar <sobrenome>, <pais>, <endereco>, <cidade>, <cep>, <telefone>, <e-mail>
             Então deve aparecer a mensagem "O campo Sobrenome é de preenchimento obrigatório. Deve conter apenas letras e espaço."
@@ -40,7 +40,7 @@
 
 
 
-            Cenario: Campo país sem informação
+            Esquema do Cenario: Campo país sem informação
             Quando eu digitar <nome>
             E digitar <sobrenome>, <pais>, <endereco>, <cidade>, <cep>, <telefone>, <e-mail>
             Então deve aparecer a mensagem "Favor selecionar um país."
@@ -51,7 +51,7 @@
             | Ana Clara | Silva     | nulo | Rua Dom Pedro II, 736 | Vinhedo  | 13530-360 | (19) 3415-6607 | a.clara@outlook.com.br |
             | Kalel     | Penteado  | nulo | Avenida 13, 895       | Valinhos | 1380-970  | (19) 3376-4176 | superkalel@gmail.com   |
 
-            Cenario: Campo endereço incorreto
+            Esquema do Cenario: Campo endereço incorreto
             Quando eu digitar <nome>
             E digitar <sobrenome>, <pais>, <endereco>, <cidade>, <cep>, <telefone>, <e-mail>
             Então deve aparecer a mensagem "O campo Endereço é de preenchimento obrigatório. Não deve conter caracteres especiais."
@@ -63,7 +63,7 @@
             | Kalel     | Penteado  | Brasil | Avenida 13, 895 *() | Valinhos | 1380-970  | (19) 3376-4176 | superkalel@gmail.com   |
 
 
-            Cenario: Campo cidade incorreto
+            Esquema do Cenario: Campo cidade incorreto
             Quando eu digitar <nome>
             E digitar <sobrenome>, <pais>, <endereco>, <cidade>, <cep>, <telefone>, <e-mail>
             Então deve aparecer a mensagem "O campo Cidade é de preenchimento obrigatório. Deve conter apenas letras e espaços."
@@ -75,7 +75,7 @@
             | Kalel     | Penteado  | Brasil | Avenida 13, 895       | Valinhos 234 | 1380-970  | (19) 3376-4176 | superkalel@gmail.com   |
 
 
-            Cenario: Campo cep incorreto
+            Esquema do Cenario: Campo cep incorreto
             Quando eu digitar <nome>
             E digitar <sobrenome>, <pais>, <endereco>, <cidade>, <cep>, <telefone>, <e-mail>
             Então deve aparecer a mensagem "O campo CEP é de preenchimento obrigatório. Deve conter apenas números."
@@ -87,7 +87,7 @@
             | Kalel     | Penteado  | Brasil | Avenida 13, 895       | Valinhos | 1380-970äsd | (19) 3376-4176 | superkalel@gmail.com   |
 
 
-            Cenario: Campo telefone incorreto
+            Esquema do Cenario: Campo telefone incorreto
             Quando eu digitar <nome>
             E digitar <sobrenome>, <pais>, <endereco>, <cidade>, <cep>, <telefone>, <e-mail>
             Então deve aparecer a mensagem "O campo Telefone é de preenchimento obrigatório. Favor informar telefone com DDD."
@@ -99,7 +99,7 @@
             | Kalel     | Penteado  | Brasil | Avenida 13, 895       | Valinhos | 1380-970  | telefone 376-4176 | superkalel@gmail.com   |
 
 
-            Cenario: Campo e-mail incorreto
+            Esquema do Cenario: Campo e-mail incorreto
             Quando eu digitar <nome>
             E digitar <sobrenome>, <pais>, <endereco>, <cidade>, <cep>, <telefone>, <e-mail>
             Então deve aparecer a mensagem "O campo e-mail é de preenchimento obrigatório. Favor informar e-mail válido."
