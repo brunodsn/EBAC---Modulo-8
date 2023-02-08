@@ -3,7 +3,7 @@
             Quero fazer concluir meu cadastro
             Para finalizar minha compra
 
-            Cenario: Todos os campos obrigatórios corretos
+            Esquema do Cenario: Todos os campos obrigatórios corretos
             Quando eu digitar <nome>
             E digitar <sobrenome>, <pais>, <endereco>, <cidade>, <cep>, <telefone>, <e-mail>
             Então deve aparecer a mensagem "Deseja finalizar a compra?"
@@ -15,7 +15,7 @@
             | Kalel     | Penteado  | Brasil | Avenida 13, 895       | Valinhos | 1380-970  | (19) 3376-4176 | superkalel@gmail.com   |
 
 
-            Cenario: Campo e-mail incorreto
+            Esquema do Cenario: Campo e-mail incorreto
             Quando eu digitar <nome>
             E digitar <sobrenome>, <pais>, <endereco>, <cidade>, <cep>, <telefone>, <e-mail>
             Então deve aparecer a mensagem "O campo e-mail é de preenchimento obrigatório. Favor informar e-mail válido."
@@ -26,7 +26,7 @@
             | Ana Clara | Silva     | Brasil | Rua Dom Pedro II, 736 | Vinhedo  | 13530-360 | (19) 3415-6607 | a.clara@outlook.com.br___. |
             | Kalel     | Penteado  | Brasil | Avenida 13, 895       | Valinhos | 1380-970  | (19) 3376-4176 | superkalel@gmail,commm     |
 
-            Cenario: Todos os campos preenchidos corretamente
+            Esquema do Cenario: Todos os campos preenchidos corretamente
             Quando eu digitar <nome>
             E digitar <sobrenome>, <pais>, <endereco>, <cidade>, <cep>, <telefone>, <e-mail>
             Então deve aparecer a mensagem "Existe campo sem preenchimento. Favor verificar e corrigir."
