@@ -1,59 +1,32 @@
-        Funcionalidade: Configurar produto
-        Como cliente da EBAC-SHOP
-        Quero configurar meu produto de acordo com meu tamanho e gosto
-        E escolher a quantidade
-        Para depois inserir no carrinho
+            #Language: pt
 
-        Contexto:
-        Dado que eu acesse a página do EBAC-SHOP
+            Funcionalidade: Configurar produto
+            Como cliente da EBAC
+            Quero configurar meu produto de acordo com meu tamanho e gosto
+            Para depois inserir no carrinho
 
-        Esquema do Cenario: Seleções de cor, tamanho e quantidade válidos
-        Quando eu selecionar a <cor>
-        E o <tamanho>, <quantidade>
-        Então deve emitir a mensagem "Produto adicionado ao carrinho"
+            Contexto:
+            Dado que eu acesse a configuração do produto
 
-        Exemplos:
-            | cor     | tamanho | quantidade |
-            | azul    | M       | 1          |
-            | laranja | P       | 5          |
+            Cenário: Dados obrigatórios
+            Quando eu selecionar "cor", "tamanho" e "quantidade"
+            E clicar para finalizar
+            Então deve exibir a mensagem de "item obrigatório cadastrado com sucesso"
 
+            Cenário: Itens por venda
+            Quando eu selecionar "10 produtos" por venda
+            E inserir no carrinho "mais de 10 produtos"
+            Então deve exibir uma mensagem de alerta "apenas 10 itens por venda"
 
-        Esquema do Cenario: Seleções de cor inválida
-        Quando eu selecionar a <cor>
-        E o <tamanho>, <quantidade>
-        Então deve emitir a mensagem de erro "Selecionar Cor: Por favor, escolha uma opção"
+            Cenário: Limpar produto
+            Quando eu selecionar o botão "limpar"
+            E eu clicar em confirmar
+            Então eu devo retornar a "pagina de produtos"
 
-        Exemplos:
-            | cor  | tamanho | quantidade |
-            | nulo | G       | 1          |
-            | nulo | P       | 5          |
-            | nulo | M       | 9          |
-
-
-        Cenario: Seleções de tamanho inválido
-        Quando eu selecionar a <cor>
-        E o <tamanho>, <quantidade>
-        Então deve emitir a mensagem de erro "Selecionar Tamanho: Por favor, escolha uma opção"
-
-        Exemplos:
-            | cor      | tamanho | quantidade |
-            | azul     | nulo   | 1          |
-            | laranja  | nulo    | 5          |
-            | vermelho | nulo    | 9          |
-
-
-        Esquema do Cenario: Seleções de quantidade inválida
-        Quando eu selecionar a <cor>
-        E o <tamanho>, <quantidade>
-        Então deve emitir a mensagem de erro <mensagem>
-
-        Exemplos:
-            | cor      | tamanho | quantidade | mensagem                             |
-            | azul     | G       | 11         | Permitido selecionar até 10 produtos |
-            | laranja  | P       | 0          | Quantidade inválida                  |
-            | vermelho | M       | nulo       | Quantidade inválida                  |
-
-
-Cenario: Limpar configuração dos produtos
-Quando eu clicar no botão "Limpar"
-Então deve aparecer a mensagem "Selecione a cor e o tamanho desejados"
+            Esquema do Cenário: Configurar produto
+            Quando eu selecionar <cor>, <tamanho> e <quantidade>
+            E clicar para finalizar
+            Então deve exibir a <mensagem>
+            | cor      | tamanho | quantidade | mensagem                                |
+            | "branco" | g       | 2          | item obrigatório cadastrado com sucesso |
+            | "azul"   | m       | 1          | item obrigatório cadastrado com sucesso |
