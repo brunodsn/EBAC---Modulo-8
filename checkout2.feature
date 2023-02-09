@@ -27,5 +27,5 @@
             Quando eu deixar o <campo> vazio
             Então deve exibir a <mensagem>
             | campo | mensagem      |
-            | -     | "campo vazio" |
-            | -     | "campo vazio" |
+            | ----     | "campo vazio" |
+            | ----     | "campo vazio" |
