@@ -25,7 +25,6 @@
             Então exibir mensagem "E-mail cadastrado com sucesso"
 
 
-
             Esquema do Cenário: Autenticação de email inválido
             Quando eu digitar o <email>
             E os <caracteres> não forem válidos
