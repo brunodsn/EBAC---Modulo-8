@@ -26,7 +26,7 @@
             Então o sistema deve exibir meus pedidos e a <mensagem>
 
             Exemplos:
-            | usuario                  | senha       | mensagem             |
-            | "matheus@gmail.com"      | "0123!"     | "ir para o checkout" |
-            | "deborahnunes@gmail.com" | "9876#"     | "ir para o checkout" |
+            | usuario                  | senha       | mensagem           |
+            | "matheus@gmail.com"      | "0123!"     | "fazer o checkout" |
+            | "deborahnunes@gmail.com" | "9876#"     | "fazer o checkout" |
 
