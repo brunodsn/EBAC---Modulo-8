@@ -1,33 +1,27 @@
-Funcionalidade: Autenticação de usuário
-    Como cliente da EBAC-SHOP
-    Quero autenticar usuário e senha
-    Para acessar a página de checkout
+            #Language: pt
 
-    Contexto:
-        Dado que eu acesse a página de autenticação do EBAC-SHOP
+            Funcionalidade: Login na plataforma
+            Como cliente da EBAC-SHOP
+            Quero fazer o login (autenticação) na plataforma
+            Para visualizar meus pedidos
 
-    Cenario: Autenticar múltiplos usuários
-        Quando eu digitar o <usuario>
-        E a <senha>
-        Então deve aparecer a mensagem "Olá, <nome>" na página de checkout
+            Contexto:
+            Dado que eu acesse o Login na plataforma
 
-        Exemplos:
-            | usuario                  | senha           | nome     |
-            | deborahnunes@gmail.com   | 12356987@       | deborah  |
-            | a.clara@outlook.com.br   | 89562924*       | anaclara |
-            | superkalel@gmail.com     | 1144785269689** | kalel    |
+            Cenário: Dados válidos
+            Quando eu digitar o usuário "matheus@gmail.com"
+            E a senha "0123!"
+            Então deve ser direcionado para a tela do "checkout"
 
-    Esquema do Cenario: Usuário inválido
-        Quando eu digitar o <usuario>
-        E a <senha>
-        Então deve aparecer a <mensagem>
+            Cenário: Campos inválidos
+            Quando eu digitar o usuário "deborahnunes@gmail.com"
+            E a senha "987@"
+            Então deve exibir uma mensagem de alerta "usuários ou senha inválidos"
 
-        Exemplos:
-            | usuario             | senha        | mensagem                    |
-            | deborahgmail.com    | 12356987@    | E-mail com formato inválido |
-            | invalid@hotmail.com | 3@Zqaj5FqGzm | Usuário inexistente         |
-
-    Esquema do Cenario: Usuário com senha inválida
-        Quando eu digitar o usuário "deborah@gmail.com"
-        E a senha "123@fail"
-        Então deve aparecer a mensagem "Usuário ou senha inválidos"
+            Esquema do Cenário: Usuário ou senha inválida
+            Quando eu digitar o <usuário>
+            E a <senha>
+            Então deve exibir a <mensagem>
+            | usuário              | senha  | mensagem                      |
+            | "deborahnunes@gmail.com" | "123321" | "usuários ou senha inválidos" |
+            | "matheus@gmail.com"    | "oioioi" | "usuários ou senha inválidos" |
